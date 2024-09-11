@@ -11,7 +11,7 @@ import pyrebase
 import os
 
 config = {
-    "apiKey": "AIzaSyDj9DPTgoKXN1mc6yn6oLvuVif1GGcV1RA",
+    "apiKey": API_KEY,
     "authDomain": "negobot-dca88.firebaseapp.com",
     "projectId": "negobot-dca88",
     "storageBucket": "negobot-dca88.appspot.com",
