@@ -1,3 +1,5 @@
 Our cutting-edge e-commerce platform revolutionizes online transactions by seamlessly blending real-time communication with predictive analytics. At its core, the platform features a dynamic buyer/seller chat system, enabling direct and instant negotiations between parties.
+
 What sets this platform apart is its integration of machine learning technology. We've implemented a sophisticated Support Vector Machine (SVM) model that analyzes ongoing negotiations in real-time. This predictive model achieves an impressive 83.61% accuracy in forecasting negotiation outcomes, providing valuable insights to both buyers and sellers.
+
 By combining immediate communication capabilities with AI-driven predictions, our platform empowers users to make informed decisions, optimize their negotiation strategies, and ultimately enhance the overall e-commerce experience. This innovative approach not only streamlines the transaction process but also adds a layer of intelligence that gives our users a competitive edge in the digital marketplace.
