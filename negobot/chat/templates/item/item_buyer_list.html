@@ -1,0 +1,37 @@
+{% extends 'base/base_logged_in.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="display: flex; justify-content: center;">
+    <div class="card mb-3" style="width: 700px; margin-top: 3rem;">
+        <div class="d-flex">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="{{item.image_url}}" alt="{{item.category}}" style="width: 300px; height: 100%;">
+          </div>
+          <div class="">
+            <div class="card-body">
+              <h4 class="card-title"><strong>{{ item.name }}</strong></h4>
+              <p class="card-text mb-1" style="color:#5f939a; font-size: 120%">Category: {{ item.category.lower }}</p>
+              <p class="card-text mb-1" style="color:#5f939a; font-size: 120%">Description: {{ item.description }}</p>
+              <p class="card-text mb-1" style="color:#5f939a; font-size: 120%">Seller Listing Price: <i class="fas fa-rupee-sign"></i>  {{ item.listing_price }}</p>
+              <p class="card-text mb-3" style="color:#5f939a; font-size: 120%">Seller Username: {{ item.seller }}</p>
+              {% if item.seller.username == username %}
+              <a href='/chat/updateItem/{{item.id}}' class="btn btnclr-blue">Update</a>
+              <a href='/chat/deleteItem/{{item.id}}' class="btn btnclr-red">Delete</a>
+                    <hr><p class="card-text mb-1" style="color:#5f939a; font-size: 120%">Interested Buyers:</p>
+                    {% for buyer in buyers %}
+                        <a href='/chat/{{item.id}}{{buyer}}' class="btn btnclr" id="buyer-id">{{buyer}}</a>
+                    {% endfor %}
+                {% elif item.seller.username != username %}
+                    <button type="submit" class="btn btn-dark btn-sm" id="room-id-submit">Buy item</button>
+                {% else %}
+                    You are not logged in!
+                {% endif %}
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}  }
